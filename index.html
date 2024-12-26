@@ -1,14 +1,385 @@
-
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="./css/style.css">
 
-<!-- <style>
+<style>
+html {
+    font-size: 62.5%  /* 1rem=16pxを10pxに変換 */
+}
 
+body {
+    min-width: 320px;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    font-size: 1.6rem;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.2;
+}
 
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
 
-</style> -->
+h1, h2, h3, h4, h5, h6, p, figure {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-size: 3.6rem;
+}
+h2 {
+    font-size: 2.8rem;
+}
+h3 {
+    font-size: 2.4rem;
+}
+h4, h5, h6 {
+    font-size: 2.0rem;
+}
+p, figure {
+    font-size: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+.template__main {
+    padding: 0 3% 80px 3%;
+    border: 1px solid #000;
+    background: #fff;
+    overflow: hidden;
+
+    .main-visual {
+        width: 100%;
+        height: auto;
+        transition: all 0.3s;
+
+        a {
+            display: inline-block;
+            width: 100%;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .main-visual:hover {
+        opacity: 0.7;
+    }
+
+    .content-wrap {
+        width: 100%;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column-reverse;
+        @media (min-width: 1100px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .brands {
+            width: 100%;
+            margin-top: 40px;
+            overflow: hidden;
+            @media (min-width: 1100px) {
+                width: 17%;
+                margin-top: 0;
+            }
+
+            h2 {
+                height: 50px;
+                font-size: 2.4rem;
+                font-weight: 500;
+                color: #F2F2F2;
+                line-height: 50px;
+                text-align: center;
+                background-color: #2D1105;
+            }
+
+            .sale-link {
+                width: 192px;
+                margin-top: 20px;
+                transition: all 0.3s;
+                @media (min-width: 1100px) {
+                    width: 100%;
+                }
+
+                a {
+                    display: inline-block;
+                    width: 100%;
+
+                    span {
+                        display: inline-block;
+                        width: 100%;
+                        font-size: 1.8rem;
+                        font-weight: 500;
+                        color: red;
+                        line-height: 1.6;
+                        border-bottom: 1px solid #706865;
+                        padding-left: 6px;
+                        position: relative;
+                        @media (min-width: 768px) {
+                            font-size: 2.0rem;
+                        }
+                    }
+    
+                    span::before {
+                        content: "";
+                        width: 11px;
+                        height: 1.4px;
+                        background-color: red;
+                        position: absolute;
+                        right: 6px;
+                        top: 50%;
+                        transform: rotate(40deg);
+                        transform-origin: bottom right;
+                    }
+                    span::after {
+                        content: "";
+                        width: 26px;
+                        height: 1px;
+                        background-color: red;
+                        position: absolute;
+                        right: 6px;
+                        top: 50%;
+                    }
+                }
+            }
+            .sale-link:hover {
+                opacity: 0.3;
+            }
+
+            ul {
+                min-width: 330px;
+                margin-top: 4px;
+                padding: 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                @media (min-width: 1100px) {
+                    flex-direction: column;
+                }
+
+                li {
+                    width: 30%;
+                    min-width: 98px;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    color: #2D1105;
+                    line-height: 1.6;
+                    border-bottom: 1px solid #706865;
+                    margin-top: 14px;
+                    padding-left: 1%;
+                    transition: all 0.3s;
+                    @media (min-width: 768px) {
+                        width: 21%;
+                        font-size: 1.8rem;
+                    }
+                    @media (min-width: 1100px) {
+                        width: 100%;
+                        font-size: 2.0rem;
+                    }
+                }
+
+                li a {
+                    display: inline-block;
+                    width: 100%;
+                }
+                li:hover {
+                    opacity: 0.3;
+                }
+            }
+        }
+
+        .main-content {
+            width: 100%;
+            @media (min-width: 1100px) {
+                width: 79%;
+            }
+
+            .item-title {
+                width: 100%;
+                background-color: #FA9970;
+                border: 1px solid #000;
+                display: flex;
+                align-items: center;
+
+                h1 {
+                    font-size: clamp( 2.0rem, 2vw, 3.0rem);
+                    font-weight: 700;
+                    color: black;
+                    line-height: 1.5;
+                    text-align: center;
+                    padding: 16px 4%;
+                }
+            }
+
+            .table__wrap {
+                display: flex;
+                flex-direction: column;
+                margin-top: 28px;
+                @media (min-width: 768px) {
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+
+                section {
+                    table {
+                        width: 100%;
+                        border-collapse: collapse;
+                        color: black;
+                        
+                        tr {
+                            th {
+                                height: 48px;
+                                font-size: 2.2rem;
+                                font-weight: 700;
+                                color: #F2F2F2;
+                                background-color: #2D1105;
+                                border: 1px solid #000;
+                            }
+
+                            td {
+                                border: 1px solid #000;
+                                padding-left: 2%;
+                                padding-top: 8px;
+                                padding-bottom: 8px;
+                                white-space: normal;
+                                word-wrap: break-word;
+                                overflow-wrap: break-word;
+                            }
+
+                            td:first-child {
+                                font-size: 1.8rem;
+                                font-weight: 700;
+                                background-color: #ECE6E3;
+                            }
+                        }
+                    }
+                }
+
+                .product-details {
+                    width: 100%;
+                    @media (min-width: 768px) {
+                        width: 46%;
+                    }
+
+                    .details__table tr {
+                        width: 100%;
+
+                        th {
+                            text-align: center;
+                        }
+
+                        td:first-child {
+                            width: 28%;
+                            min-width: 160px;
+                        }
+                    }
+                }
+
+                .table__colum {
+                    width: 100%;
+                    margin-top: 28px;
+                    @media (min-width: 768px) {
+                        width: 51%;
+                        margin-top: 0;
+                    }
+
+                    .condition {
+                        width: 100%;
+                        
+                        .condition__table tr {
+                            th {
+                                line-height: 1.2;
+                                padding-top: 8px;
+                                padding-bottom: 8px;
+                            }
+
+                            th:last-child {
+                                font-size: 2.4rem;
+                                color: black;
+                                background-color: #FA9970;
+                            }
+
+                            td:first-child {
+                                width: 34%;
+                                min-width: 160px;
+                            }
+                        }
+
+                        .note p {
+                            margin-top: 8px;
+                        }
+                    }
+
+                    .condition__guide {
+                        width: 100%;
+                        margin-top: 28px;
+
+                        .condition-guide__table {
+                            width: 100%;
+
+                            tr {
+                                td {
+                                    line-height: 1.4;
+                                }
+
+                                td:first-child {
+                                    width: 34%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .details-erea {
+        width: 100%;
+        margin-top: 60px;
+
+        section {
+            margin-top: 40px;
+        
+            h2 {
+                height: 48px;
+                font-size: 2.2rem;
+                font-weight: 700;
+                color: #F2F2F2;
+                line-height: 48px;
+                background-color: #2D1105;
+                border: 1px solid #000;
+                padding-left: 2%;
+            }
+
+            .article {
+                padding-left: 2%;
+                margin-top: 16px;
+
+                p {
+                    margin-top: 12px;
+                }
+            }
+        }
+    }
+}
+</style>
 
 <div class="template__main">
     <div class="main-visual">
@@ -115,7 +486,7 @@
                             </tr>
                             <tr>
                                 <td contenteditable="false">Appearance</td>
-                                <td>tiny scuffs from normal use.tiny scuffs from normal use.tiny scuffs from normal use.tiny scuffs from normal use.tiny scuffs from normal use.tiny scuffs from normal use.tiny scuffs from normal use.tiny scuffs from normal use.tiny scuffs from normal use.</td>
+                                <td>tiny scuffs from normal use.</td>
                             </tr>
                             <tr>
                                 <td contenteditable="false">Glass</td>
