@@ -1,2 +1,361 @@
+html {
+  font-size: 62.5%;
+}
 
+body {
+  min-width: 320px;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.2;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+h1, h2, h3, h4, h5, h6, p, figure {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3.6rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+h4, h5, h6 {
+  font-size: 2rem;
+}
+
+p, figure {
+  font-size: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+.template__main {
+  padding: 0 3% 60px 3%;
+  border: 1px solid #000;
+  background: #fff;
+  overflow: hidden;
+}
+.template__main .main-visual {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s;
+}
+.template__main .main-visual a {
+  display: inline-block;
+  width: 100%;
+}
+.template__main .main-visual a img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.template__main .main-visual:hover {
+  opacity: 0.7;
+}
+.template__main .content-wrap {
+  width: 100%;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media (min-width: 1100px) {
+  .template__main .content-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+}
+.template__main .content-wrap .brands {
+  width: 100%;
+  margin-top: 40px;
+  overflow: hidden;
+}
+@media (min-width: 1100px) {
+  .template__main .content-wrap .brands {
+    width: 17%;
+    margin-top: 0;
+  }
+}
+.template__main .content-wrap .brands h2 {
+  height: 50px;
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #F2F2F2;
+  line-height: 50px;
+  text-align: center;
+  background-color: #2D1105;
+}
+.template__main .content-wrap .brands .sale-link {
+  width: 192px;
+  margin-top: 20px;
+  transition: all 0.3s;
+}
+@media (min-width: 1100px) {
+  .template__main .content-wrap .brands .sale-link {
+    width: 100%;
+  }
+}
+.template__main .content-wrap .brands .sale-link a {
+  display: inline-block;
+  width: 100%;
+}
+.template__main .content-wrap .brands .sale-link a span {
+  display: inline-block;
+  width: 100%;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: red;
+  line-height: 1.6;
+  border-bottom: 1px solid #706865;
+  padding-left: 6px;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .template__main .content-wrap .brands .sale-link a span {
+    font-size: 2rem;
+  }
+}
+.template__main .content-wrap .brands .sale-link a span::before {
+  content: "";
+  width: 11px;
+  height: 1.4px;
+  background-color: red;
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: rotate(40deg);
+  transform-origin: bottom right;
+}
+.template__main .content-wrap .brands .sale-link a span::after {
+  content: "";
+  width: 26px;
+  height: 1px;
+  background-color: red;
+  position: absolute;
+  right: 6px;
+  top: 50%;
+}
+.template__main .content-wrap .brands .sale-link:hover {
+  opacity: 0.3;
+}
+.template__main .content-wrap .brands ul {
+  min-width: 330px;
+  margin-top: 4px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (min-width: 1100px) {
+  .template__main .content-wrap .brands ul {
+    flex-direction: column;
+  }
+}
+.template__main .content-wrap .brands ul li {
+  width: 30%;
+  min-width: 98px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #2D1105;
+  line-height: 1.6;
+  border-bottom: 1px solid #706865;
+  margin-top: 14px;
+  padding-left: 1%;
+  transition: all 0.3s;
+}
+@media (min-width: 768px) {
+  .template__main .content-wrap .brands ul li {
+    width: 21%;
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 1100px) {
+  .template__main .content-wrap .brands ul li {
+    width: 100%;
+    font-size: 2rem;
+  }
+}
+.template__main .content-wrap .brands ul li a {
+  display: inline-block;
+  width: 100%;
+}
+.template__main .content-wrap .brands ul li:hover {
+  opacity: 0.3;
+}
+.template__main .content-wrap .main-content {
+  width: 100%;
+}
+@media (min-width: 1100px) {
+  .template__main .content-wrap .main-content {
+    width: 79%;
+  }
+}
+.template__main .content-wrap .main-content .item-title {
+  width: 100%;
+  background-color: #FA9970;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+}
+.template__main .content-wrap .main-content .item-title h1 {
+  font-size: clamp(2rem, 2vw, 3rem);
+  font-weight: 700;
+  color: black;
+  line-height: 1.5;
+  text-align: center;
+  padding: 16px 4%;
+}
+.template__main .content-wrap .main-content .table__wrap {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+}
+@media (min-width: 768px) {
+  .template__main .content-wrap .main-content .table__wrap {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1100px) {
+  .template__main .content-wrap .main-content .table__wrap {
+    margin-top: 30px;
+  }
+}
+.template__main .content-wrap .main-content .table__wrap section table {
+  width: 100%;
+  border-collapse: collapse;
+  color: black;
+}
+.template__main .content-wrap .main-content .table__wrap section table tr th {
+  height: 48px;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #F2F2F2;
+  background-color: #2D1105;
+  border: 1px solid #000;
+}
+.template__main .content-wrap .main-content .table__wrap section table tr td {
+  border: 1px solid #000;
+  padding-left: 2%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.template__main .content-wrap .main-content .table__wrap section table tr td:first-child {
+  font-size: 1.8rem;
+  font-weight: 700;
+  background-color: #ECE6E3;
+}
+.template__main .content-wrap .main-content .table__wrap .product-details {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .template__main .content-wrap .main-content .table__wrap .product-details {
+    width: 46%;
+  }
+}
+.template__main .content-wrap .main-content .table__wrap .product-details .details__table tr {
+  width: 100%;
+}
+.template__main .content-wrap .main-content .table__wrap .product-details .details__table tr th {
+  text-align: center;
+}
+.template__main .content-wrap .main-content .table__wrap .product-details .details__table tr td:first-child {
+  width: 28%;
+  min-width: 160px;
+}
+.template__main .content-wrap .main-content .table__wrap .table__colum {
+  width: 100%;
+  margin-top: 28px;
+}
+@media (min-width: 768px) {
+  .template__main .content-wrap .main-content .table__wrap .table__colum {
+    width: 51%;
+    margin-top: 0;
+  }
+}
+.template__main .content-wrap .main-content .table__wrap .table__colum .condition {
+  width: 100%;
+}
+.template__main .content-wrap .main-content .table__wrap .table__colum .condition .condition__table tr th {
+  line-height: 1.2;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.template__main .content-wrap .main-content .table__wrap .table__colum .condition .condition__table tr th:last-child {
+  font-size: 2.4rem;
+  color: black;
+  background-color: #FA9970;
+}
+.template__main .content-wrap .main-content .table__wrap .table__colum .condition .condition__table tr td:first-child {
+  width: 34%;
+  min-width: 160px;
+}
+.template__main .content-wrap .main-content .table__wrap .table__colum .condition .note p {
+  margin-top: 8px;
+}
+.template__main .content-wrap .main-content .table__wrap .table__colum .condition__guide {
+  width: 100%;
+  margin-top: 28px;
+}
+.template__main .content-wrap .main-content .table__wrap .table__colum .condition__guide .condition-guide__table {
+  width: 100%;
+}
+.template__main .content-wrap .main-content .table__wrap .table__colum .condition__guide .condition-guide__table tr td {
+  line-height: 1.4;
+}
+.template__main .content-wrap .main-content .table__wrap .table__colum .condition__guide .condition-guide__table tr td:first-child {
+  width: 34%;
+}
+.template__main .details-erea {
+  width: 100%;
+}
+.template__main .details-erea section {
+  margin-top: 40px;
+}
+.template__main .details-erea section h2 {
+  height: 48px;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #F2F2F2;
+  line-height: 48px;
+  background-color: #2D1105;
+  border: 1px solid #000;
+  padding-left: 2%;
+}
+.template__main .details-erea section .article {
+  padding-left: 2%;
+  margin-top: 16px;
+}
+.template__main .details-erea section .article p {
+  margin-top: 12px;
+}
 /*# sourceMappingURL=style.css.map */
